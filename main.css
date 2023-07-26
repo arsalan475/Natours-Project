@@ -7,15 +7,18 @@
 body{
     padding: 25px;
     color:white ;
+    line-height: 1.7;
 }
 
 .header{
-    background-image: linear-gradient(to right bottom, #0006,#9998) ,url(./img/hero.jpg);
+    background-image: linear-gradient(to right bottom, rgba(49, 180, 49, 0.567),rgba(22, 231, 22, 0.739)) ,url(./img/hero.jpg);
     background-size: cover;
     height: 90vh;
     position: relative;
     clip-path: polygon(0 0,100% 0, 100% 80%,0 100%);
-    
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-position: center top;
 }
 
 .logo-box{
@@ -25,19 +28,62 @@ body{
 }
 
 .logo{
-    height: 40px;
+    height: 35px;
 }
 
 .text-box{
 position: absolute;
+
 top: 40%;
 left: 50%;
 transform: translate(-50%,-50%);
+text-transform: uppercase;
 }
 
 .heading-primary-main{
     display: block;
+    font-size: 3rem;
+    letter-spacing: 30px;
+    font-weight: 400;
+    animation: toRight 3s ease-out 
 }
 .heading-primary-sub{
     display: block;
+    font-size: 1rem;
+    letter-spacing: 13.8px;
+    animation: toLeft 3s ease-out;
+}
+
+
+@keyframes toRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes toLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
